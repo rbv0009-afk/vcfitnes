@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Landing</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
 </head>
-<body>
-    <h1 class="hover:bg-amber-500 text-blue-500 cursor-pointer text-3xl">Index</h1>
+
+<body class="bg-black">
+
+<div class="relative w-full h-screen overflow-hidden">
+
+    <!-- IMAGEN COMIDA -->
+    <div class="absolute inset-0">
+        <img 
+        src="img/comidaimg.png"
+        class="w-full h-full object-cover [clip-path:polygon(0_0,100%_0,0_100%)]"
+        >
+    </div>
+
+
+    <!-- IMAGEN GYM -->
+    <div class="absolute inset-0">
+        <img 
+        src="img/gymvp.png"
+        class="w-full h-full object-cover [clip-path:polygon(100%_0,100%_100%,0_100%)]"
+        >
+    </div>
+
+
+    <!-- LINEA DIAGONAL VERDE -->
+    <div class="absolute inset-0 pointer-events-none">
+
+        <div class="
+        absolute
+        w-[200%]
+        h-[4px]
+        bg-green-400
+        rotate-[-45deg]
+        top-1/2
+        left-[-25%]
+        ">
+        </div>
+
+    </div>
+
+
+    <!-- CONTENEDOR CENTRAL -->
+    <div class="absolute inset-0 flex items-center justify-center z-10">
+
+        <div class="text-center">
+
+            <h1 class="text-green-400 text-4xl md:text-6xl font-bold tracking-widest">
+                LOREM
+            </h1>
+
+            <p class="text-gray-300 text-sm md:text-base tracking-[0.35em] mt-2">
+                LOREM IPSUM DOLORMET
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
 </body>
 </html>

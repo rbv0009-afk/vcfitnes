@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-black text-white">
+
+<!-- NAVBAR -->
+
+<header class="bg-black border-b border-[#d4fa00] p-4 flex justify-between items-center">
+
+<h1 class="text-[#d4fa00] text-xl font-bold tracking-widest">
+FIT & FOOD
+</h1>
+
+<nav class="space-x-6">
+<a href="#" class="hover:text-[#d4fa00]">Inicio</a>
+<a href="#" class="hover:text-[#d4fa00]">Comida</a>
+<a href="#" class="hover:text-[#d4fa00]">Perfil</a>
+</nav>
+
+</header>
+
+<main class="max-w-7xl mx-auto p-6 space-y-16">
+
+
+<!-- MENU DEL DIA -->
+
+<section>
+
+<h2 class="text-3xl text-[#d4fa00] font-bold mb-8">
+Menú del día
+</h2>
+
+<div id="menuGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+
+<!-- PLATO -->
+
+<div class="bg-neutral-900 border border-[#d4fa00] rounded-xl overflow-hidden hover:scale-105 transition">
+
+<img src="img/Pollo Fitness.png" class="w-full h-44 object-cover">
+
+<div class="p-4 space-y-2">
+
+<h3 class="font-semibold">Pollo Fitness</h3>
+
+<p class="text-[#d4fa00] font-bold">€8.90</p>
+
+<p class="text-sm text-gray-300">520 kcal</p>
+
+</div>
+
+</div>
+
+
+<div class="bg-neutral-900 border border-[#d4fa00] rounded-xl overflow-hidden hover:scale-105 transition">
+
+<img src="img/Bowl Energético.png" class="w-full h-44 object-cover">
+
+<div class="p-4">
+
+<h3 class="font-semibold">Bowl Energético</h3>
+
+<p class="text-[#d4fa00] font-bold">€8.40</p>
+
+<p class="text-sm text-gray-300">480 kcal</p>
+
+</div>
+
+</div>
+
+
+<div class="bg-neutral-900 border border-[#d4fa00] rounded-xl overflow-hidden hover:scale-105 transition">
+
+<img src="img/Carne Magra.png" class="w-full h-44 object-cover">
+
+<div class="p-4">
+
+<h3 class="font-semibold">Carne Magra</h3>
+
+<p class="text-[#d4fa00] font-bold">€10.20</p>
+
+<p class="text-sm text-gray-300">610 kcal</p>
+
+</div>
+
+</div>
+
+
+<!-- PLATOS OCULTOS -->
+
+<div class="extra hidden bg-neutral-900 border border-[#d4fa00] rounded-xl overflow-hidden">
+
+<img src="img/Arroz con Pollo.png" class="w-full h-44 object-cover">
+
+<div class="p-4">
+
+<h3>Arroz con Pollo</h3>
+
+<p class="text-[#d4fa00] font-bold">€7.90</p>
+
+<p class="text-sm text-gray-300">530 kcal</p>
+
+</div>
+
+</div>
+
+
+<div class="extra hidden bg-neutral-900 border border-[#d4fa00] rounded-xl overflow-hidden">
+
+<img src="img/Pasta Proteica.png" class="w-full h-44 object-cover">
+
+<div class="p-4">
+
+<h3>Pasta Proteica</h3>
+
+<p class="text-[#d4fa00] font-bold">€8.20</p>
+
+<p class="text-sm text-gray-300">510 kcal</p>
+
+</div>
+
+</div>
+
+
+<div class="extra hidden bg-neutral-900 border border-[#d4fa00] rounded-xl overflow-hidden">
+
+<img src="img/Salmón Fit.png" class="w-full h-44 object-cover">
+
+<div class="p-4">
+
+<h3>Salmón Fit</h3>
+
+<p class="text-[#d4fa00] font-bold">€11.50</p>
+
+<p class="text-sm text-gray-300">620 kcal</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COMBOS -->
+
+<section>
+
+<h2 class="text-3xl text-[#d4fa00] font-bold mb-8">
+Combos
+</h2>
+
+<div class="grid md:grid-cols-2 gap-8">
+
+<div class="bg-neutral-900 border border-[#d4fa00] rounded-xl p-6">
+
+<h3 class="text-xl font-semibold">Combo Fitness</h3>
+
+<p class="text-[#d4fa00] font-bold">€14.90</p>
+
+<p class="text-gray-300 text-sm">
+Pollo fitness + bebida proteica
+</p>
+
+</div>
+
+
+<div class="bg-neutral-900 border border-[#d4fa00] rounded-xl p-6">
+
+<h3 class="text-xl font-semibold">Combo Energía</h3>
+
+<p class="text-[#d4fa00] font-bold">€13.50</p>
+
+<p class="text-gray-300 text-sm">
+Bowl energético + batido
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BOTON -->
+
+<div class="flex justify-center">
+
+<button id="verMas"
+class="bg-[#d4fa00] text-black px-10 py-3 rounded-lg font-semibold hover:opacity-80 transition">
+
+Ver más platillos
+
+</button>
+
+</div>
+
+
+</main>
+
+
+<!-- SCRIPT -->
+
+<script>
+
+document.getElementById("verMas").addEventListener("click", function() {
+
+let platos = document.querySelectorAll(".extra");
+
+platos.forEach(p => p.classList.remove("hidden"));
+
+this.style.display = "none";
+
+});
+
+</script>
+
+</body>
+</html>
