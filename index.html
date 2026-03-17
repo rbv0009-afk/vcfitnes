@@ -79,7 +79,7 @@
               <div>
                 <div class="widgets w-full relative">
                   <div
-                    class="widget w-10 h-10 fill-white flex items-center justify-center rounded-full bg-white absolute"
+                    class="widget w-10 h-10 fill-white flex items-center justify-center rounded-full bg-white absolute border-2 border-[#9c9c9c]"
                   >
                     <img class="w-8 fill-white" src="img/user-ico.svg" alt="" />
                   </div>
@@ -100,24 +100,30 @@
                   </div>
                   <div class="stars ms-36 flex gap-1">
                     <div class="star w-3">
-                      <img class="w-3" src="img/star-ico.svg" alt="">
-                    </div><div class="star w-3">
-                      <img class="w-3" src="img/star-ico.svg" alt="">
-                    </div><div class="star w-3">
-                      <img class="w-3" src="img/star-ico.svg" alt="">
-                    </div><div class="star w-3">
-                      <img class="w-3" src="img/star-ico.svg" alt="">
+                      <img class="w-3" src="img/star-ico.svg" alt="" />
                     </div>
                     <div class="star w-3">
-                      <img class="w-3" src="img/star-half-ico.svg" alt="">
+                      <img class="w-3" src="img/star-ico.svg" alt="" />
+                    </div>
+                    <div class="star w-3">
+                      <img class="w-3" src="img/star-ico.svg" alt="" />
+                    </div>
+                    <div class="star w-3">
+                      <img class="w-3" src="img/star-ico.svg" alt="" />
+                    </div>
+                    <div class="star w-3">
+                      <img class="w-3" src="img/star-half-ico.svg" alt="" />
                     </div>
                     <div>
-                      <small class="absolute -top-1 text-white left-[13.8rem]">4.5</small>
+                      <small class="absolute -top-1 text-white left-[13.8rem]"
+                        >4.5</small
+                      >
                     </div>
-                    <p class="absolute text-white top-4">Trusted by 15+ members</p>
+                    <p class="absolute text-white top-4">
+                      Trusted by 15+ members
+                    </p>
                   </div>
                 </div>
-                
               </div>
             </div>
             <div class="flex justify-center items-center">
@@ -131,21 +137,131 @@
         </section>
 
         <!-- TRAINING PROGRAMS -->
-        <section class="border-2 mt-32 text-white">
-          <div class="cards grid grid-cols-4 gap-5">
-            <div class="card border-2 border-amber-500 "> <!--w-[400px] h-[500px]-->
-
-              <div class="flex">
-                <div class="ico w-10 h-10">
-                  <img class="w-8" src="img/fire-ico.svg" alt="">
-                </div>
-                <h2>Fat Loss (Caloric Deficit)</h2>
-              </div>
-
-              <div class="">
-                <p>Description: A structured program focused on reducing body fat through a controlled caloric deficit while preserving muscle mass. Includes efficient training sessions and a satiating, sustainable nutrition plan.</p>
-              </div>
+        <!-- TRAINING PROGRAMS -->
+        <section class="mt-32 text-white px-16 py-16 bg-[#1e2535] rounded-3xl">
+          <!-- Fila superior: título izquierda, descripción derecha -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-3">Programs</p>
+              <h2 class="text-5xl font-extrabold text-white leading-tight">
+                Train <span class="text-[#d4fa00]">Smarter</span> Every Day
+              </h2>
             </div>
+            <div class="flex items-center">
+              <p class="text-gray-300">
+                Choose the program that fits your goal. Each plan is designed by
+                experts to help you get real results, whether you want to lose
+                fat, gain muscle, or just feel better.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fila 1: 4 columnas -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14"
+          >
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/fire-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Fat Loss (Caloric Deficit)
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A structured program focused on reducing body fat through a
+                controlled caloric deficit while preserving muscle mass.
+                Includes efficient training sessions and a satiating,
+                sustainable nutrition plan.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/fire-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">Muscle Gain (Bulking)</h3>
+              <p class="text-gray-300 text-sm">
+                A hypertrophy‑oriented program designed to increase muscle mass
+                through progressive overload and a moderate caloric surplus.
+                Ideal for users aiming to grow in size and strength.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/fire-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Body Recomposition (Controlled Surplus)
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A structured program focused on reducing body fat through a
+                controlled caloric deficit while preserving muscle mass.
+                Includes efficient training sessions and a satiating,
+                sustainable nutrition plan.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/fire-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">Active Maintenance</h3>
+              <p class="text-gray-300 text-sm">
+                A lifestyle‑focused program for maintaining current weight while
+                improving energy, performance, and overall well‑being. Features
+                moderate training and a balanced nutrition approach.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fila 2: 3 columnas centradas -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 lg:px-32">
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/fire-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Healthy Living Plan (Wellness)
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A health‑oriented program aimed at improving daily habits,
+                metabolic health, and overall vitality. Includes light to
+                moderate workouts and an anti‑inflammatory, easy‑to‑follow
+                nutrition plan.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/fire-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Beginner Program (Foundations)
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A beginner‑friendly plan designed for people starting from zero.
+                Simple, progressive, and safe workouts paired with basic
+                nutrition guidance to build strong long‑term habits.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/fire-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Strength / Powerlifting
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A performance‑driven program focused on increasing maximal
+                strength in the squat, bench press, and deadlift. Features
+                structured progression and nutrition optimized for training
+                output.
+              </p>
+            </div>
+          </div>
+
+          <!-- Botones centrados -->
+          <div class="flex justify-center gap-5">
+            <a
+              href=""
+              class="px-8 py-2.5 border-2 border-white text-white rounded-[10px] hover:bg-[#ffffff1a] transition-[100ms] ease-in"
+            >
+              Contact Us
+            </a>
+            <a
+              href="signup.html"
+              class="px-8 py-2.5 border-2 border-white text-white rounded-[10px] hover:bg-[#ffffff1a] transition-[100ms] ease-in"
+            >
+              Join Us
+            </a>
           </div>
         </section>
       </main>
