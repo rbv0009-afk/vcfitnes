@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food Menu — VR Fitness</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#181e2e] text-white">
+
+
+  <!-- ── HEADER ── -->
+  <header class="text-white bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
+                 flex justify-between px-8 h-20 items-center
+                 fixed top-4 left-1/2 -translate-x-1/2 w-[90%] z-50">
+
+    <h1 class="font-bold text-2xl">
+      <span class="text-[#d4fa00]">VR</span>-Fitness
+    </h1>
+
+    <nav class="flex gap-8 font-semibold">
+      <a href="index.html"  class="hover:text-[#d4fa00] transition">Home</a>
+      <a href="comida.html" class="text-[#d4fa00] border-b-2 border-[#d4fa00]">Food</a>
+      <a href="gym.html"    class="hover:text-[#d4fa00] transition">Programs</a>
+    </nav>
+
+    <a href="login.html"
+       class="px-5 py-2 bg-[#ffffff0a] border border-[#ffffff1b] rounded-xl
+              hover:bg-[#d4fa00] hover:text-black transition">
+      Sign In
+    </a>
+
+  </header>
+
+
+  <!-- ── CONTENIDO ── -->
+  <main class="pt-32 pb-24 w-[90%] mx-auto space-y-24">
+
+
+    <!-- MENÚ DEL DÍA -->
+    <section>
+
+      <h2 class="text-4xl font-bold mb-12">
+        Menú del <span class="text-[#d4fa00]">día</span>
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
+                    overflow-hidden hover:border-[#d4fa00] transition">
+          <img src="img/Pollo Fitness.png" alt="Pollo Fitness"
+               class="w-full h-48 object-cover bg-[#ffffff0a]" />
+          <div class="p-5 space-y-1">
+            <h3 class="font-semibold text-lg">Pollo Fitness</h3>
+            <p class="text-[#d4fa00] font-bold">€8.90</p>
+            <p class="text-sm text-gray-400">520 kcal</p>
+          </div>
+        </div>
+
+        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
+                    overflow-hidden hover:border-[#d4fa00] transition">
+          <img src="img/Bowl Energético.png" alt="Bowl Energético"
+               class="w-full h-48 object-cover bg-[#ffffff0a]" />
+          <div class="p-5 space-y-1">
+            <h3 class="font-semibold text-lg">Bowl Energético</h3>
+            <p class="text-[#d4fa00] font-bold">€8.40</p>
+            <p class="text-sm text-gray-400">480 kcal</p>
+          </div>
+        </div>
+
+        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
+                    overflow-hidden hover:border-[#d4fa00] transition">
+          <img src="img/Carne Magra.png" alt="Carne Magra"
+               class="w-full h-48 object-cover bg-[#ffffff0a]" />
+          <div class="p-5 space-y-1">
+            <h3 class="font-semibold text-lg">Carne Magra</h3>
+            <p class="text-[#d4fa00] font-bold">€10.20</p>
+            <p class="text-sm text-gray-400">610 kcal</p>
+          </div>
+        </div>
+
+        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
+                    overflow-hidden hover:border-[#d4fa00] transition">
+          <img src="img/Salmón Fit.png" alt="Salmón Fit"
+               class="w-full h-48 object-cover bg-[#ffffff0a]" />
+          <div class="p-5 space-y-1">
+            <h3 class="font-semibold text-lg">Salmón Fit</h3>
+            <p class="text-[#d4fa00] font-bold">€11.50</p>
+            <p class="text-sm text-gray-400">620 kcal</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- COMBOS -->
+    <section>
+
+      <h2 class="text-4xl font-bold mb-12">
+        Combos <span class="text-[#d4fa00]">Fitness</span>
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+
+        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl p-8
+                    hover:border-[#d4fa00] transition space-y-2">
+          <h3 class="text-xl font-semibold">Combo Energía</h3>
+          <p class="text-[#d4fa00] font-bold text-lg">€13.90</p>
+          <p class="text-gray-400 text-sm">Bowl energético + batido de proteína</p>
+        </div>
+
+        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl p-8
+                    hover:border-[#d4fa00] transition space-y-2">
+          <h3 class="text-xl font-semibold">Combo Recovery</h3>
+          <p class="text-[#d4fa00] font-bold text-lg">€15.50</p>
+          <p class="text-gray-400 text-sm">Salmón fit + smoothie verde</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- MENÚ COMPLETO — sin JS, usando <details> nativo de HTML
+         <details> oculta/muestra su contenido al hacer click en <summary>
+         sin necesitar ninguna línea de JavaScript -->
+    <details class="group">
+
+      <!-- <summary> es el botón visible, styled igual que el botón anterior -->
+      <summary class="flex justify-center list-none cursor-pointer">
+        <span class="bg-[#d4fa00] text-black px-10 py-3 rounded-xl
+                     font-semibold hover:opacity-80 transition select-none">
+          Ver más platillos
+        </span>
+      </summary>
+
+      <!-- Todo esto se muestra/oculta al hacer click en summary -->
+      <div class="mt-16 space-y-16">
+
+        <!-- DESAYUNOS -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6">
+            Desayunos <span class="text-[#d4fa00]">(Energía limpia)</span>
+          </h2>
+          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Tostada Masa Madre con Huevo y Aguacate
+              <span class="block text-[#d4fa00] font-semibold mt-1">320 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Porridge de Avena con Arándanos
+              <span class="block text-[#d4fa00] font-semibold mt-1">290 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Pancakes de Plátano y Avena
+              <span class="block text-[#d4fa00] font-semibold mt-1">310 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Omelette de Claras con Champiñones
+              <span class="block text-[#d4fa00] font-semibold mt-1">210 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Pudding de Chía con Mango
+              <span class="block text-[#d4fa00] font-semibold mt-1">250 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Tostada de Centeno con Ricotta
+              <span class="block text-[#d4fa00] font-semibold mt-1">280 kcal</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ALMUERZOS -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Almuerzos</h2>
+          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Bowl de Salmón y Quinoa
+              <span class="block text-[#d4fa00] font-semibold mt-1">450 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Pasta Integral con Pollo
+              <span class="block text-[#d4fa00] font-semibold mt-1">420 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Hamburguesa de Lentejas
+              <span class="block text-[#d4fa00] font-semibold mt-1">380 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Pechuga al Curry
+              <span class="block text-[#d4fa00] font-semibold mt-1">410 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Poke Bowl de Atún
+              <span class="block text-[#d4fa00] font-semibold mt-1">400 kcal</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- SNACKS -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Snacks</h2>
+          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Yogur griego con nueces
+              <span class="block text-[#d4fa00] font-semibold mt-1">180 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Hummus con apio
+              <span class="block text-[#d4fa00] font-semibold mt-1">170 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Manzana con mantequilla de maní
+              <span class="block text-[#d4fa00] font-semibold mt-1">200 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Edamames
+              <span class="block text-[#d4fa00] font-semibold mt-1">120 kcal</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CENAS -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Cenas</h2>
+          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Tacos de lechuga con pavo
+              <span class="block text-[#d4fa00] font-semibold mt-1">260 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Pescado al papillote
+              <span class="block text-[#d4fa00] font-semibold mt-1">240 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Crema de calabaza
+              <span class="block text-[#d4fa00] font-semibold mt-1">180 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Tataki de atún
+              <span class="block text-[#d4fa00] font-semibold mt-1">290 kcal</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- BEBIDAS -->
+        <div>
+          <h2 class="text-3xl font-bold mb-6">Bebidas</h2>
+          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Té verde con limón
+              <span class="block text-[#d4fa00] font-semibold mt-1">0 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Café solo
+              <span class="block text-[#d4fa00] font-semibold mt-1">5 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Batido de proteína
+              <span class="block text-[#d4fa00] font-semibold mt-1">120 kcal</span>
+            </li>
+            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
+                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
+              Té matcha con almendras
+              <span class="block text-[#d4fa00] font-semibold mt-1">50 kcal</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </details>
+
+
+  </main>
+
+
+  <!-- ── FOOTER ── -->
+  <footer class="border-t border-[#ffffff17] text-center text-gray-500 text-sm py-8">
+    © 2025 VR Fitness · Todos los derechos reservados
+  </footer>
+
+
+</body>
+</html>
