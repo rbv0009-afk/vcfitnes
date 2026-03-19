@@ -1,308 +1,665 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Food — BR-Fitness</title>
+  </head>
+  <body class="bg-[#181e2e]">
+    <div class="md:px-20 px-2">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Food Menu — VR Fitness</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
+      <!-- HEADER -->
+      <header
+        class="text-white bg-[#181e2eb3] backdrop-blur-md border-[#ffffff17] border-2 rounded-2xl flex justify-between px-5 h-20 items-center fixed top-1 left-1/2 -translate-x-1/2 sm:w-[92%] w-full z-50"
+      >
+        <h1 class="font-bold text-2xl">
+          <span class="text-[#d4fa00]">BR</span>-Fitness
+        </h1>
 
-<body class="bg-[#181e2e] text-white">
+        <!-- Nav desktop -->
+        <nav class="hidden md:flex gap-8 font-semibold text-white">
+          <a href="index.html"  class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Home</a>
+          <a href="comida.html" class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Food</a>
+          <a href="gym.html"    class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Gym Page</a>
+          <a href="#reviews"    class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Reviews</a>
+          <a href="#menu"       class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Menu</a>
+        </nav>
 
-
-  <!-- ── HEADER ── -->
-  <header class="text-white bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
-                 flex justify-between px-8 h-20 items-center
-                 fixed top-4 left-1/2 -translate-x-1/2 w-[90%] z-50">
-
-    <h1 class="font-bold text-2xl">
-      <span class="text-[#d4fa00]">VR</span>-Fitness
-    </h1>
-
-    <nav class="flex gap-8 font-semibold">
-      <a href="index.html"  class="hover:text-[#d4fa00] transition">Home</a>
-      <a href="comida.html" class="text-[#d4fa00] border-b-2 border-[#d4fa00]">Food</a>
-      <a href="gym.html"    class="hover:text-[#d4fa00] transition">Programs</a>
-    </nav>
-
-    <a href="login.html"
-       class="px-5 py-2 bg-[#ffffff0a] border border-[#ffffff1b] rounded-xl
-              hover:bg-[#d4fa00] hover:text-black transition">
-      Sign In
-    </a>
-
-  </header>
-
-
-  <!-- ── CONTENIDO ── -->
-  <main class="pt-32 pb-24 w-[90%] mx-auto space-y-24">
-
-
-    <!-- MENÚ DEL DÍA -->
-    <section>
-
-      <h2 class="text-4xl font-bold mb-12">
-        Menú del <span class="text-[#d4fa00]">día</span>
-      </h2>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
-                    overflow-hidden hover:border-[#d4fa00] transition">
-          <img src="img/Pollo Fitness.png" alt="Pollo Fitness"
-               class="w-full h-48 object-cover bg-[#ffffff0a]" />
-          <div class="p-5 space-y-1">
-            <h3 class="font-semibold text-lg">Pollo Fitness</h3>
-            <p class="text-[#d4fa00] font-bold">€8.90</p>
-            <p class="text-sm text-gray-400">520 kcal</p>
-          </div>
+        <!-- Botones desktop -->
+        <div class="hidden md:flex gap-2 items-center">
+          <a href="login.html"  class="px-5 bg-[#ffffff0a] border-2 border-[#ffffff1b] text-white py-2 rounded-[10px] hover:bg-[#d4fa00] hover:border-[#d4fa00] hover:text-black transition-[100ms] ease-in">Sign In</a>
+          <a href="signup.html" class="px-5 bg-[#d4fa00] border-2 border-[#d4fa00] text-black py-2 rounded-[10px] hover:bg-[#ffffff0a] hover:border-[#ffffff1b] hover:text-white transition-[100ms] ease-in">Sign Up</a>
         </div>
 
-        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
-                    overflow-hidden hover:border-[#d4fa00] transition">
-          <img src="img/Bowl Energético.png" alt="Bowl Energético"
-               class="w-full h-48 object-cover bg-[#ffffff0a]" />
-          <div class="p-5 space-y-1">
-            <h3 class="font-semibold text-lg">Bowl Energético</h3>
-            <p class="text-[#d4fa00] font-bold">€8.40</p>
-            <p class="text-sm text-gray-400">480 kcal</p>
-          </div>
-        </div>
+        <!-- Hamburguesa -->
+        <button id="menu-btn" onclick="toggleMenu()" class="md:hidden flex flex-col gap-1.5 p-2">
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="block w-6 h-0.5 bg-white transition-all duration-300"></span>
+        </button>
+      </header>
 
-        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
-                    overflow-hidden hover:border-[#d4fa00] transition">
-          <img src="img/Carne Magra.png" alt="Carne Magra"
-               class="w-full h-48 object-cover bg-[#ffffff0a]" />
-          <div class="p-5 space-y-1">
-            <h3 class="font-semibold text-lg">Carne Magra</h3>
-            <p class="text-[#d4fa00] font-bold">€10.20</p>
-            <p class="text-sm text-gray-400">610 kcal</p>
-          </div>
+      <!-- Menú móvil -->
+      <div id="mobile-menu" class="text-white fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#181e2e] border-2 border-[#ffffff17] rounded-2xl px-6 py-8 z-40 flex flex-col gap-6 hidden">
+        <nav class="flex flex-col gap-5 font-semibold text-lg border-b border-[#ffffff1a] pb-6">
+          <a href="index.html"  class="hover:text-[#d4fa00] transition-[100ms] ease-in">Home</a>
+          <a href="comida.html" class="hover:text-[#d4fa00] transition-[100ms] ease-in">Food</a>
+          <a href="gym.html"    class="hover:text-[#d4fa00] transition-[100ms] ease-in">Gym Page</a>
+          <a href="#reviews"    class="hover:text-[#d4fa00] transition-[100ms] ease-in">Reviews</a>
+          <a href="#menu"       class="hover:text-[#d4fa00] transition-[100ms] ease-in">Menu</a>
+        </nav>
+        <div class="flex flex-col gap-3">
+          <a href="login.html"  class="text-center bg-[#ffffff0a] border-2 border-[#ffffff1b] text-white py-2.5 rounded-[10px] hover:bg-[#d4fa00] hover:border-[#d4fa00] hover:text-black transition-[100ms] ease-in">Sign In</a>
+          <a href="signup.html" class="text-center bg-[#d4fa00] border-2 border-[#d4fa00] text-black py-2.5 rounded-[10px] hover:bg-[#ffffff0a] hover:border-[#ffffff1b] hover:text-white transition-[100ms] ease-in">Sign Up</a>
         </div>
-
-        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl
-                    overflow-hidden hover:border-[#d4fa00] transition">
-          <img src="img/Salmón Fit.png" alt="Salmón Fit"
-               class="w-full h-48 object-cover bg-[#ffffff0a]" />
-          <div class="p-5 space-y-1">
-            <h3 class="font-semibold text-lg">Salmón Fit</h3>
-            <p class="text-[#d4fa00] font-bold">€11.50</p>
-            <p class="text-sm text-gray-400">620 kcal</p>
-          </div>
-        </div>
-
       </div>
-    </section>
 
+      <main class="mt-36">
 
-    <!-- COMBOS -->
-    <section>
+        <!-- HERO -->
+        <section class="md:px-16 px-2 pb-10 py-16">
+          <div class="flex flex-col gap-4">
+            <p class="text-[#d4fa00] font-semibold">Our Menu</p>
+            <h2 class="text-5xl font-bold text-white">
+              Fuel Your <span class="text-[#d4fa00]">Performance</span>
+            </h2>
+            <p class="text-white mt-2 max-w-xl">
+              Every dish is designed by our nutritionists to support your training goals. High protein, clean ingredients, and real flavour — all available at the gym restaurant.
+            </p>
 
-      <h2 class="text-4xl font-bold mb-12">
-        Combos <span class="text-[#d4fa00]">Fitness</span>
-      </h2>
+          </div>
+        </section>
 
-      <div class="grid md:grid-cols-2 gap-8">
+        <!-- MENÚ DEL DÍA -->
+        <section id="menu" class="mt-8 text-white sm:px-16 px-2 py-16 bg-[#1e2535] rounded-3xl">
+          <div class="grid grid-cols-1 lg:grid-cols-2 sm:px-0 px-4 gap-10 mb-16">
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-3">Today's Picks</p>
+              <h2 class="text-5xl font-extrabold text-white leading-tight">
+                Daily <span class="text-[#d4fa00]">Menu</span>
+              </h2>
+            </div>
+            <div class="flex items-center">
+              <p class="text-gray-300">
+                Dishes selected daily by our nutritionists. They rotate every week so you always have variety and never get bored eating healthy.
+              </p>
+            </div>
+          </div>
 
-        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl p-8
-                    hover:border-[#d4fa00] transition space-y-2">
-          <h3 class="text-xl font-semibold">Combo Energía</h3>
-          <p class="text-[#d4fa00] font-bold text-lg">€13.90</p>
-          <p class="text-gray-400 text-sm">Bowl energético + batido de proteína</p>
+          <!-- Fila 1: 4 columnas -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+
+            <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl overflow-hidden hover:border-[#d4fa00] transition-[100ms] ease-in">
+              <img src="img/Pollo Fitness.png" alt="Fitness Chicken" class="w-full h-48 object-cover bg-[#ffffff0a]" />
+              <div class="p-5 flex flex-col gap-1">
+                <h3 class="font-extrabold text-lg">Fitness Chicken</h3>
+                <p class="text-[#d4fa00] font-bold">€8.90</p>
+                <p class="text-sm text-gray-400">520 kcal · High protein</p>
+              </div>
+            </div>
+
+            <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl overflow-hidden hover:border-[#d4fa00] transition-[100ms] ease-in">
+              <img src="img/Bowl Energético.png" alt="Energy Bowl" class="w-full h-48 object-cover bg-[#ffffff0a]" />
+              <div class="p-5 flex flex-col gap-1">
+                <h3 class="font-extrabold text-lg">Energy Bowl</h3>
+                <p class="text-[#d4fa00] font-bold">€8.40</p>
+                <p class="text-sm text-gray-400">480 kcal · Balanced</p>
+              </div>
+            </div>
+
+            <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl overflow-hidden hover:border-[#d4fa00] transition-[100ms] ease-in">
+              <img src="img/Carne Magra.png" alt="Lean Beef" class="w-full h-48 object-cover bg-[#ffffff0a]" />
+              <div class="p-5 flex flex-col gap-1">
+                <h3 class="font-extrabold text-lg">Lean Beef</h3>
+                <p class="text-[#d4fa00] font-bold">€10.20</p>
+                <p class="text-sm text-gray-400">610 kcal · Muscle gain</p>
+              </div>
+            </div>
+
+            <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl overflow-hidden hover:border-[#d4fa00] transition-[100ms] ease-in">
+              <img src="img/Salmón Fit.png" alt="Fit Salmon" class="w-full h-48 object-cover bg-[#ffffff0a]" />
+              <div class="p-5 flex flex-col gap-1">
+                <h3 class="font-extrabold text-lg">Fit Salmon</h3>
+                <p class="text-[#d4fa00] font-bold">€11.50</p>
+                <p class="text-sm text-gray-400">620 kcal · Omega-3</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Fila 2: 4 columnas -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+            <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl overflow-hidden hover:border-[#d4fa00] transition-[100ms] ease-in">
+              <img src="img/Albóndigas Proteicas.png" alt="Protein Meatballs" class="w-full h-48 object-cover bg-[#ffffff0a]" />
+              <div class="p-5 flex flex-col gap-1">
+                <h3 class="font-extrabold text-lg">Protein Meatballs</h3>
+                <p class="text-[#d4fa00] font-bold">€9.50</p>
+                <p class="text-sm text-gray-400">540 kcal · High protein</p>
+              </div>
+            </div>
+
+            <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl overflow-hidden hover:border-[#d4fa00] transition-[100ms] ease-in">
+              <img src="img/Arroz con Pollo.png" alt="Chicken Rice" class="w-full h-48 object-cover bg-[#ffffff0a]" />
+              <div class="p-5 flex flex-col gap-1">
+                <h3 class="font-extrabold text-lg">Chicken Rice</h3>
+                <p class="text-[#d4fa00] font-bold">€8.70</p>
+                <p class="text-sm text-gray-400">490 kcal · Balanced</p>
+              </div>
+            </div>
+
+            <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl overflow-hidden hover:border-[#d4fa00] transition-[100ms] ease-in">
+              <img src="img/Pasta Proteica.png" alt="Protein Pasta" class="w-full h-48 object-cover bg-[#ffffff0a]" />
+              <div class="p-5 flex flex-col gap-1">
+                <h3 class="font-extrabold text-lg">Protein Pasta</h3>
+                <p class="text-[#d4fa00] font-bold">€9.20</p>
+                <p class="text-sm text-gray-400">510 kcal · Recovery</p>
+              </div>
+            </div>
+
+            <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl overflow-hidden hover:border-[#d4fa00] transition-[100ms] ease-in">
+              <img src="img/platos-ingredientes-comida-mexicana.avif" alt="Mexican Plate" class="w-full h-48 object-cover bg-[#ffffff0a]" />
+              <div class="p-5 flex flex-col gap-1">
+                <h3 class="font-extrabold text-lg">Mexican Plate</h3>
+                <p class="text-[#d4fa00] font-bold">€10.90</p>
+                <p class="text-sm text-gray-400">580 kcal · High fibre</p>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- COMBOS -->
+        <section class="mt-32 text-white sm:px-16 px-2 py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-3">Bundles</p>
+              <h2 class="text-5xl font-extrabold text-white leading-tight">
+                Combos <span class="text-[#d4fa00]">Fitness</span>
+              </h2>
+            </div>
+            <div class="flex items-center">
+              <p class="text-gray-300">
+                Combina plato + bebida y ahorra. Cada combo está pensado para cubrir tus macros sin esfuerzo extra.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-[#1e2535] border border-[#ffffff17] rounded-2xl p-8 hover:border-[#d4fa00] transition-[100ms] ease-in flex flex-col gap-4">
+              <h3 class="text-xl font-extrabold">Combo Energía</h3>
+              <p class="text-[#d4fa00] font-bold text-2xl">€13.90</p>
+              <p class="text-gray-400 text-sm border-b border-[#ffffff1a] pb-4">Bowl energético + batido de proteína</p>
+              <ul class="flex flex-col gap-2">
+                <li class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-2">
+                  <span class="text-gray-300">Bowl Energético</span>
+                  <svg class="w-5 h-5 text-[#d4fa00] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+                <li class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">Batido de proteína</span>
+                  <svg class="w-5 h-5 text-[#d4fa00] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+              </ul>
+              <a href="signup.html" class="mt-2 bg-[#d4fa00] text-black font-bold text-center py-3 rounded-[10px] hover:bg-[#ffffff0a] hover:text-white border-2 border-[#d4fa00] hover:border-[#ffffff1b] transition-[100ms] ease-in">Get combo</a>
+            </div>
+
+            <div class="bg-[#1e2535] border border-[#ffffff17] rounded-2xl p-8 hover:border-[#d4fa00] transition-[100ms] ease-in flex flex-col gap-4">
+              <h3 class="text-xl font-extrabold">Combo Recovery</h3>
+              <p class="text-[#d4fa00] font-bold text-2xl">€15.50</p>
+              <p class="text-gray-400 text-sm border-b border-[#ffffff1a] pb-4">Salmón fit + smoothie verde</p>
+              <ul class="flex flex-col gap-2">
+                <li class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-2">
+                  <span class="text-gray-300">Salmón Fit</span>
+                  <svg class="w-5 h-5 text-[#d4fa00] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+                <li class="flex justify-between items-center text-sm">
+                  <span class="text-gray-300">Smoothie verde</span>
+                  <svg class="w-5 h-5 text-[#d4fa00] shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                </li>
+              </ul>
+              <a href="signup.html" class="mt-2 bg-[#d4fa00] text-black font-bold text-center py-3 rounded-[10px] hover:bg-[#ffffff0a] hover:text-white border-2 border-[#d4fa00] hover:border-[#ffffff1b] transition-[100ms] ease-in">Get combo</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- MENÚ COMPLETO -->
+        <section class="mt-32 text-white sm:px-16 px-2 py-16 bg-[#1e2535] rounded-3xl">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-3">Full Menu</p>
+              <h2 class="text-5xl font-extrabold text-white leading-tight">
+                All <span class="text-[#d4fa00]">Dishes</span>
+              </h2>
+            </div>
+            <div class="flex items-center">
+              <p class="text-gray-300">Toda la carta disponible en el restaurante del gimnasio. Desayunos, almuerzos, snacks, cenas y bebidas.</p>
+            </div>
+          </div>
+
+          <!-- Desayunos -->
+          <div class="mb-12">
+            <h3 class="text-2xl font-extrabold mb-6">Desayunos <span class="text-[#d4fa00]">— Energía limpia</span></h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Tostada Masa Madre con Huevo y Aguacate</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">320 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Porridge de Avena con Arándanos</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">290 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Pancakes de Plátano y Avena</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">310 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Omelette de Claras con Champiñones</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">210 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Pudding de Chía con Mango</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">250 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Tostada de Centeno con Ricotta</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">280 kcal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Almuerzos -->
+          <div class="mb-12">
+            <h3 class="text-2xl font-extrabold mb-6">Almuerzos</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Bowl de Salmón y Quinoa</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">450 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Pasta Integral con Pollo</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">420 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Hamburguesa de Lentejas</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">380 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Pechuga al Curry</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">410 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Poke Bowl de Atún</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">400 kcal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Snacks -->
+          <div class="mb-12">
+            <h3 class="text-2xl font-extrabold mb-6">Snacks</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Yogur griego con nueces</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">180 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Hummus con apio</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">170 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Manzana con mantequilla de maní</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">200 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Edamames</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">120 kcal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cenas -->
+          <div class="mb-12">
+            <h3 class="text-2xl font-extrabold mb-6">Cenas</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Tacos de lechuga con pavo</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">260 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Pescado al papillote</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">240 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Crema de calabaza</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">180 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Tataki de atún</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">290 kcal</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebidas -->
+          <div>
+            <h3 class="text-2xl font-extrabold mb-6">Bebidas</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Té verde con limón</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">0 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Café solo</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">5 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Batido de proteína</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">120 kcal</span>
+              </div>
+              <div class="bg-[#181e2e] border border-[#ffffff17] rounded-2xl px-5 py-4 hover:border-[#d4fa00] transition-[100ms] ease-in flex justify-between items-center">
+                <span class="text-gray-300 text-sm">Té matcha con almendras</span>
+                <span class="text-[#d4fa00] font-bold text-sm shrink-0 ml-4">50 kcal</span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- REVIEWS -->
+        <section id="reviews" class="mt-32 text-white sm:px-16 px-0 py-16">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16">
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-3">Reviews</p>
+              <h2 class="text-5xl font-extrabold text-white">
+                What Our <span class="text-[#d4fa00]">Members</span> Say
+              </h2>
+            </div>
+            <div class="flex items-center">
+              <p class="text-gray-300">
+                Real reviews from members who eat at our restaurant every week. Unfiltered, unedited.
+              </p>
+            </div>
+          </div>
+
+          <!-- Existing reviews grid -->
+          <div id="reviews-grid" class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+
+            <!-- Review 1 -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <div class="flex gap-1">
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                "The energy bowl is the best thing I've tried at a gym. Nothing like the typical bland food you find at sports centres. I order it almost every day after training and it really helps me recover."
+              </p>
+              <div class="flex items-center gap-4 pt-4 border-t border-[#ffffff1a]">
+                <div class="w-10 h-10 rounded-full bg-[#d4fa00] flex items-center justify-center text-black font-extrabold text-sm shrink-0">AM</div>
+                <div>
+                  <p class="font-bold text-sm">Adrián Morales</p>
+                  <p class="text-gray-400 text-xs">Medium Plan · Horta</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <div class="flex gap-1">
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#ffffff30]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                "The Advanced plan includes a 15% discount at the restaurant and it really shows. The salmon fit is amazing, and the green smoothie surprised me. Never thought eating healthy at the gym could taste this good."
+              </p>
+              <div class="flex items-center gap-4 pt-4 border-t border-[#ffffff1a]">
+                <div class="w-10 h-10 rounded-full bg-[#d4fa00] flex items-center justify-center text-black font-extrabold text-sm shrink-0">LF</div>
+                <div>
+                  <p class="font-bold text-sm">Laura Fernández</p>
+                  <p class="text-gray-400 text-xs">Advanced Plan · Passeig de Gràcia</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <div class="flex gap-1">
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg class="w-4 h-4 text-[#d4fa00]" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+              <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                "I've been eating here almost every day for 6 months. The breakfasts are incredible, especially the porridge and the egg white omelette. The restaurant atmosphere is really pleasant too."
+              </p>
+              <div class="flex items-center gap-4 pt-4 border-t border-[#ffffff1a]">
+                <div class="w-10 h-10 rounded-full bg-[#d4fa00] flex items-center justify-center text-black font-extrabold text-sm shrink-0">JR</div>
+                <div>
+                  <p class="font-bold text-sm">Jorge Ruiz</p>
+                  <p class="text-gray-400 text-xs">Basic Plan · Sant Gervasi</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- LEAVE A REVIEW FORM — mismo estilo card que el resto -->
+          <div class="bg-[#1e2535] border border-[#ffffff17] rounded-2xl p-8 flex flex-col gap-6">
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-1">Share your experience</p>
+              <h3 class="text-2xl font-extrabold">Leave a <span class="text-[#d4fa00]">Review</span></h3>
+            </div>
+
+            <!-- Star picker -->
+            <div class="flex flex-col gap-2">
+              <label class="text-white text-sm font-semibold">Your rating</label>
+              <div id="star-picker" class="flex gap-2">
+                <svg data-star="1" onclick="setStars(1)" class="star w-7 h-7 text-[#ffffff20] cursor-pointer transition-colors duration-150" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg data-star="2" onclick="setStars(2)" class="star w-7 h-7 text-[#ffffff20] cursor-pointer transition-colors duration-150" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg data-star="3" onclick="setStars(3)" class="star w-7 h-7 text-[#ffffff20] cursor-pointer transition-colors duration-150" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg data-star="4" onclick="setStars(4)" class="star w-7 h-7 text-[#ffffff20] cursor-pointer transition-colors duration-150" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <svg data-star="5" onclick="setStars(5)" class="star w-7 h-7 text-[#ffffff20] cursor-pointer transition-colors duration-150" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              </div>
+            </div>
+
+            <!-- Name + Plan row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="flex flex-col gap-2">
+                <label class="text-white text-sm font-semibold">Your name</label>
+                <input id="review-name" type="text" placeholder="John Doe"
+                  class="bg-[#181e2e] border border-[#ffffff17] rounded-[10px] px-4 py-3 text-white text-sm outline-none focus:border-[#d4fa00] transition-[100ms] ease-in placeholder:text-gray-600" />
+              </div>
+              <div class="flex flex-col gap-2">
+                <label class="text-white text-sm font-semibold">Membership plan</label>
+                <select id="review-plan"
+                  class="bg-[#181e2e] border border-[#ffffff17] rounded-[10px] px-4 py-3 text-gray-400 text-sm outline-none focus:border-[#d4fa00] transition-[100ms] ease-in">
+                  <option value="" disabled selected>Select your plan</option>
+                  <option value="Basic Plan">Basic Plan</option>
+                  <option value="Medium Plan">Medium Plan</option>
+                  <option value="Advanced Plan">Advanced Plan</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Comment -->
+            <div class="flex flex-col gap-2">
+              <label class="text-white text-sm font-semibold">Your review</label>
+              <textarea id="review-text" rows="3" placeholder="Tell us about your experience..."
+                class="bg-[#181e2e] border border-[#ffffff17] rounded-[10px] px-4 py-3 text-white text-sm outline-none focus:border-[#d4fa00] transition-[100ms] ease-in placeholder:text-gray-600 resize-none"></textarea>
+            </div>
+
+            <button onclick="submitReview()"
+              class="w-fit px-8 py-3 bg-[#d4fa00] border-2 border-[#d4fa00] text-black font-bold rounded-[10px] hover:bg-[#ffffff0a] hover:border-[#ffffff1b] hover:text-white transition-[100ms] ease-in">
+              Post Review
+            </button>
+          </div>
+
+        </section>
+
+        <!-- CONTACT -->
+
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="mt-32 text-white px-16 py-16 border-t border-[#ffffff1a]">
+        <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-16 mb-16">
+          <div class="flex flex-col gap-6">
+            <h2 class="font-bold text-2xl"><span class="text-[#d4fa00]">BR</span>-Fitness</h2>
+            <p class="text-gray-400 text-sm leading-relaxed">Nuestro gimnasio está construido sobre la creencia de que el fitness es más que entrenar — es un estilo de vida. Con entrenadores certificados, equipamiento moderno y una comunidad motivadora, te ayudamos a superar tus límites.</p>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h3 class="text-[#d4fa00] font-bold text-lg">Company</h3>
+            <nav class="flex flex-col gap-3">
+              <a href="index.html"   class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm">Home</a>
+              <a href="comida.html"  class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm">Food</a>
+              <a href="gym.html"     class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm">Programs</a>
+              <a href="#contact"     class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm">Contact</a>
+            </nav>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h3 class="text-[#d4fa00] font-bold text-lg">Support</h3>
+            <nav class="flex flex-col gap-3">
+              <a class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default">FAQs</a>
+              <a class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default">Membership Plans</a>
+              <a class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default">Terms & Conditions</a>
+              <a class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default">Privacy Policy</a>
+            </nav>
+          </div>
+          <div class="flex flex-col gap-5">
+            <h3 class="text-[#d4fa00] font-bold text-lg">FAQs</h3>
+            <nav class="flex flex-col gap-3">
+              <a class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default">¿Cómo me apunto?</a>
+              <a class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default">¿Puedo cambiar de plan?</a>
+              <a class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default">¿Hay clases grupales?</a>
+              <a class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default">¿El restaurante es solo para socios?</a>
+            </nav>
+          </div>
         </div>
-
-        <div class="bg-[#ffffff0d] border border-[#ffffff17] rounded-2xl p-8
-                    hover:border-[#d4fa00] transition space-y-2">
-          <h3 class="text-xl font-semibold">Combo Recovery</h3>
-          <p class="text-[#d4fa00] font-bold text-lg">€15.50</p>
-          <p class="text-gray-400 text-sm">Salmón fit + smoothie verde</p>
+        <div class="border-t border-[#ffffff1a] pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
+          <div class="flex gap-8">
+            <a class="text-gray-400 text-sm hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default">Cookies policy</a>
+            <a class="text-gray-400 text-sm hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default">Legal terms</a>
+            <a class="text-gray-400 text-sm hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default">Privacy policy</a>
+          </div>
+          <p class="text-gray-500 text-xs">© 2025 BR-Fitness. All rights reserved.</p>
+          <div class="flex gap-5">
+            <a class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.213 5.567 5.951-5.567zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.16 8.16 0 004.77 1.52V6.82a4.85 4.85 0 01-1-.13z"/></svg></a>
+          </div>
         </div>
+      </footer>
 
-      </div>
-    </section>
+    </div>
 
+    <script>
+      function toggleMenu() {
+        document.getElementById('mobile-menu').classList.toggle('hidden')
+      }
 
-    <!-- MENÚ COMPLETO — sin JS, usando <details> nativo de HTML
-         <details> oculta/muestra su contenido al hacer click en <summary>
-         sin necesitar ninguna línea de JavaScript -->
-    <details class="group">
+      // ── STAR PICKER ──
+      let selectedStars = 0
 
-      <!-- <summary> es el botón visible, styled igual que el botón anterior -->
-      <summary class="flex justify-center list-none cursor-pointer">
-        <span class="bg-[#d4fa00] text-black px-10 py-3 rounded-xl
-                     font-semibold hover:opacity-80 transition select-none">
-          Ver más platillos
-        </span>
-      </summary>
+      function setStars(n) {
+        selectedStars = n
+        document.querySelectorAll('.star').forEach(s => {
+          s.classList.toggle('text-[#d4fa00]', parseInt(s.dataset.star) <= n)
+          s.classList.toggle('text-[#ffffff20]', parseInt(s.dataset.star) > n)
+        })
+      }
 
-      <!-- Todo esto se muestra/oculta al hacer click en summary -->
-      <div class="mt-16 space-y-16">
+      // Hover preview
+      document.querySelectorAll('.star').forEach(s => {
+        s.addEventListener('mouseenter', () => {
+          const n = parseInt(s.dataset.star)
+          document.querySelectorAll('.star').forEach(st => {
+            st.classList.toggle('text-[#d4fa00]', parseInt(st.dataset.star) <= n)
+            st.classList.toggle('text-[#ffffff20]', parseInt(st.dataset.star) > n)
+          })
+        })
+        s.addEventListener('mouseleave', () => setStars(selectedStars))
+      })
 
-        <!-- DESAYUNOS -->
-        <div>
-          <h2 class="text-3xl font-bold mb-6">
-            Desayunos <span class="text-[#d4fa00]">(Energía limpia)</span>
-          </h2>
-          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Tostada Masa Madre con Huevo y Aguacate
-              <span class="block text-[#d4fa00] font-semibold mt-1">320 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Porridge de Avena con Arándanos
-              <span class="block text-[#d4fa00] font-semibold mt-1">290 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Pancakes de Plátano y Avena
-              <span class="block text-[#d4fa00] font-semibold mt-1">310 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Omelette de Claras con Champiñones
-              <span class="block text-[#d4fa00] font-semibold mt-1">210 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Pudding de Chía con Mango
-              <span class="block text-[#d4fa00] font-semibold mt-1">250 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Tostada de Centeno con Ricotta
-              <span class="block text-[#d4fa00] font-semibold mt-1">280 kcal</span>
-            </li>
-          </ul>
-        </div>
+      // ── SUBMIT REVIEW ──
+      function submitReview() {
+        const name = document.getElementById('review-name').value.trim()
+        const plan = document.getElementById('review-plan').value
+        const text = document.getElementById('review-text').value.trim()
 
-        <!-- ALMUERZOS -->
-        <div>
-          <h2 class="text-3xl font-bold mb-6">Almuerzos</h2>
-          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Bowl de Salmón y Quinoa
-              <span class="block text-[#d4fa00] font-semibold mt-1">450 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Pasta Integral con Pollo
-              <span class="block text-[#d4fa00] font-semibold mt-1">420 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Hamburguesa de Lentejas
-              <span class="block text-[#d4fa00] font-semibold mt-1">380 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Pechuga al Curry
-              <span class="block text-[#d4fa00] font-semibold mt-1">410 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Poke Bowl de Atún
-              <span class="block text-[#d4fa00] font-semibold mt-1">400 kcal</span>
-            </li>
-          </ul>
-        </div>
+        if (!name || !plan || !text || selectedStars === 0) 
+        {
+          alert('Please fill in all fields and select a rating.')
+          return
+        }
 
-        <!-- SNACKS -->
-        <div>
-          <h2 class="text-3xl font-bold mb-6">Snacks</h2>
-          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Yogur griego con nueces
-              <span class="block text-[#d4fa00] font-semibold mt-1">180 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Hummus con apio
-              <span class="block text-[#d4fa00] font-semibold mt-1">170 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Manzana con mantequilla de maní
-              <span class="block text-[#d4fa00] font-semibold mt-1">200 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Edamames
-              <span class="block text-[#d4fa00] font-semibold mt-1">120 kcal</span>
-            </li>
-          </ul>
-        </div>
+        // Build initials
+        const initials = name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2)
 
-        <!-- CENAS -->
-        <div>
-          <h2 class="text-3xl font-bold mb-6">Cenas</h2>
-          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Tacos de lechuga con pavo
-              <span class="block text-[#d4fa00] font-semibold mt-1">260 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Pescado al papillote
-              <span class="block text-[#d4fa00] font-semibold mt-1">240 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Crema de calabaza
-              <span class="block text-[#d4fa00] font-semibold mt-1">180 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Tataki de atún
-              <span class="block text-[#d4fa00] font-semibold mt-1">290 kcal</span>
-            </li>
-          </ul>
-        </div>
+        // Build stars HTML
+        let starsHTML = ''
+        for (let i = 1; i <= 5; i++) 
+        {
+          const color = i <= selectedStars ? 'text-[#d4fa00]' : 'text-[#ffffff30]'
+          starsHTML += `<svg class="w-4 h-4 ${color}" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>`
+        }
 
-        <!-- BEBIDAS -->
-        <div>
-          <h2 class="text-3xl font-bold mb-6">Bebidas</h2>
-          <ul class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Té verde con limón
-              <span class="block text-[#d4fa00] font-semibold mt-1">0 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Café solo
-              <span class="block text-[#d4fa00] font-semibold mt-1">5 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Batido de proteína
-              <span class="block text-[#d4fa00] font-semibold mt-1">120 kcal</span>
-            </li>
-            <li class="bg-[#ffffff0d] border border-[#ffffff17] rounded-xl px-5 py-3
-                       hover:border-[#d4fa00] transition text-gray-300 text-sm">
-              Té matcha con almendras
-              <span class="block text-[#d4fa00] font-semibold mt-1">50 kcal</span>
-            </li>
-          </ul>
-        </div>
+        // Build card
+        const card = document.createElement('div')
+        card.className = 'bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5'
+        card.innerHTML = `
+          <div class="flex gap-1">${starsHTML}</div>
+          <p class="text-gray-300 text-sm leading-relaxed flex-1">"${text}"</p>
+          <div class="flex items-center gap-4 pt-4 border-t border-[#ffffff1a]">
+            <div class="w-10 h-10 rounded-full bg-[#d4fa00] flex items-center justify-center text-black font-extrabold text-sm shrink-0">${initials}</div>
+            <div>
+              <p class="font-bold text-sm">${name}</p>
+              <p class="text-gray-400 text-xs">${plan}</p>
+            </div>
+          </div>`
 
-      </div>
-    </details>
+        document.getElementById
+        ('reviews-grid').appendChild(card)
 
+        // Reset form
+        document.getElementById
+        ('review-name').value = ''
+        document.getElementById
+        ('review-plan').value = ''
+        document.getElementById
+        ('review-text').value = ''
+        selectedStars = 0
+        document.querySelectorAll('.star').forEach(s => {
+          s.classList.remove('text-[#d4fa00]')
+          s.classList.add('text-[#ffffff20]')
+        })
 
-  </main>
+        // Scroll to new card
+        card.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
 
+      function showMap(location) {
+        const maps = {
+          horta:       'https://maps.google.com/maps?q=Carrer+de+Campoamor+18+Barcelona&output=embed',
+          santgervasi: 'https://maps.google.com/maps?q=Carrer+de+Santalo+52+Barcelona&output=embed',
+          passeig:     'https://maps.google.com/maps?q=Passeig+de+Gracia+43+Barcelona&output=embed',
+        }
+        document.getElementById('map-frame').src = maps[location]
 
-  <!-- ── FOOTER ── -->
-  <footer class="border-t border-[#ffffff17] text-center text-gray-500 text-sm py-8">
-    © 2025 VR Fitness · Todos los derechos reservados
-  </footer>
+        document.querySelectorAll('[onclick^="showMap"]').forEach(el => {
+          el.classList.remove('border-[#d4fa00]')
+          el.classList.add('border-transparent')
+        })
+        event.currentTarget.classList.remove('border-transparent')
+        event.currentTarget.classList.add('border-[#d4fa00]')
+      }
+    </script>
 
-
-</body>
+  </body>
 </html>
