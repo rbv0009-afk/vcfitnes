@@ -20,10 +20,10 @@
         <!-- Nav desktop -->
         <nav class="hidden md:flex gap-8 font-semibold text-white">
           <a href="landing.html"  class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Home</a>
-          <a href="#combos" class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Combos</a>
-          <a class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full cursor-default">Gym Page</a>
-          <a href="#reviews"    class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Reviews</a>
-          <a href="#menu"       class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Menu</a>
+          <a href="#combos" data-section="combos" class="nav-link relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Combos</a>
+          <a href="index.html" class="relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Gym Page</a>
+          <a href="#reviews" data-section="reviews" class="nav-link relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Reviews</a>
+          <a href="#menu" data-section="menu" class="nav-link relative pb-0.5 transition-all duration-200 hover:text-[#d4fa00] after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-[#d4fa00] after:transition-all after:duration-300 hover:after:w-full">Menu</a>
         </nav>
 
         <!-- Botones desktop -->
@@ -45,7 +45,7 @@
         <nav class="flex flex-col gap-5 font-semibold text-lg border-b border-[#ffffff1a] pb-6">
           <a href="landing.html"  class="hover:text-[#d4fa00] transition-[100ms] ease-in">Home</a>
           <a href="#combos" class="hover:text-[#d4fa00] transition-[100ms] ease-in">Combos</a>
-          <a class="hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default">Gym Page</a>
+          <a href="index.html" class="hover:text-[#d4fa00] transition-[100ms] ease-in">Gym Page</a>
           <a href="#reviews"    class="hover:text-[#d4fa00] transition-[100ms] ease-in">Reviews</a>
           <a href="#menu"       class="hover:text-[#d4fa00] transition-[100ms] ease-in">Menu</a>
         </nav>
@@ -563,6 +563,26 @@
       function toggleMenu() {
         document.getElementById('mobile-menu').classList.toggle('hidden')
       }
+
+      // ── SCROLL SPY ──
+      const sections = document.querySelectorAll('section[id]')
+      const navLinks = document.querySelectorAll('.nav-link[data-section]')
+
+      window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY + 120
+        sections.forEach(section => {
+          const top    = section.offsetTop
+          const height = section.offsetHeight
+          const id     = section.getAttribute('id')
+          if (scrollY >= top && scrollY < top + height) {
+            navLinks.forEach(link => {
+              const isActive = link.dataset.section === id
+              link.style.color = isActive ? '#d4fa00' : ''
+            })
+          }
+        })
+      })
+
 
       // ── STAR PICKER ──
       let selectedStars = 0
