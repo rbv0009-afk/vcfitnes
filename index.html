@@ -1,13 +1,1227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-</head>
-<body>
-    <h1 class="bg-emerald-300 text-blue-500 cursor-pointer text-3xl">Index</h1>
-</body>
+    <script defer src="js/main.js"></script>
+    <title>BR-Fitness</title>
+  </head>
+  <body class="bg-[#181e2e]">
+    <div class="md:px-20 px-2">
+      <!--               ENCABEZADO             -->
+
+      <header
+        class="text-white bg-[#181e2eb3] backdrop-blur-md border-[#ffffff17] border-2 rounded-2xl flex justify-between px-5 h-20 items-center fixed top-1 left-1/2 -translate-x-1/2 sm:w-[92%] w-full z-50"
+      >
+        <h1 class="font-bold text-2xl">
+          <a href="landing.html"
+          class="decoration-0"
+          ><span class="text-[#d4fa00]">BR</span>-Fitness</a>
+        </h1>
+
+        <!-- Nav desktop -->
+        <nav class="hidden md:flex gap-8 font-semibold">
+          <a
+            href="#home"
+            class="nav-link transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Home</a
+          >
+          <a
+            href="#programs"
+            class="nav-link transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Programs</a
+          >
+          <a
+            href="#prices"
+            class="nav-link transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Prices</a
+          >
+          <a
+            href="#reviews"
+            class="nav-link transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Reviews</a
+          >
+          <a
+            href="#contact"
+            class="nav-link transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Contact</a
+          >
+        </nav>
+
+        <!-- Botones desktop -->
+        <div class="hidden md:flex gap-2 items-center">
+          <a
+            href="login.html"
+            class="px-5 bg-[#ffffff0a] border-2 border-[#ffffff1b] text-white py-2 rounded-[10px] hover:bg-[#d4fa00] hover:border-[#d4fa00] hover:text-black transition-[100ms] ease-in"
+            >Sign In</a
+          >
+          <a
+            href="Register.html"
+            class="px-5 bg-[#d4fa00] border-2 border-[#d4fa00] text-black py-2 rounded-[10px] hover:bg-[#ffffff0a] hover:border-[#ffffff1b] hover:text-white transition-[100ms] ease-in"
+            >Sign Up</a
+          >
+        </div>
+
+        <!-- Botón hamburguesa (solo móvil) -->
+        <button
+          id="menu-btn"
+          onclick="toggleMenu()"
+          class="md:hidden flex flex-col gap-1.5 p-2"
+        >
+          <span
+            id="line1"
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            id="line2"
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+          <span
+            id="line3"
+            class="block w-6 h-0.5 bg-white transition-all duration-300"
+          ></span>
+        </button>
+      </header>
+
+      <!-- Menú móvil -->
+      <div
+        id="mobile-menu"
+        class="text-white fixed top-24 left-1/2 -translate-x-1/2 w-[90%] bg-[#181e2e] border-2 border-[#ffffff17] rounded-2xl px-6 py-8 z-40 flex flex-col gap-6 hidden"
+      >
+        <nav
+          class="flex flex-col gap-5 font-semibold text-lg border-b border-[#ffffff1a] pb-6"
+        >
+          <a
+            href="#home"
+            class="text-white nav-link-mobile transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Home</a
+          >
+          <a
+            href="#programs"
+            class="text-white nav-link-mobile transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Programs</a
+          >
+          <a
+            href="#prices"
+            class="text-white nav-link-mobile transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Prices</a
+          >
+          <a
+            href="#reviews"
+            class="text-white nav-link-mobile transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Reviews</a
+          >
+          <a
+            href="#contact"
+            class="text-white nav-link-mobile transition-[100ms] ease-in hover:text-[#d4fa00]"
+            >Contact</a
+          >
+        </nav>
+        <div class="flex flex-col gap-3">
+          <a
+            href="login.html"
+            class="text-center bg-[#ffffff0a] border-2 border-[#ffffff1b] text-white py-2.5 rounded-[10px] hover:bg-[#d4fa00] hover:border-[#d4fa00] hover:text-black transition-[100ms] ease-in"
+            >Sign In</a
+          >
+          <a
+            href="signup.html"
+            class="text-center bg-[#d4fa00] border-2 border-[#d4fa00] text-black py-2.5 rounded-[10px] hover:bg-[#ffffff0a] hover:border-[#ffffff1b] hover:text-white transition-[100ms] ease-in"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+
+      <main class="mt-36">
+        <!-- HEROE DE PRESENTACION -->
+        <section id="home" class="md:px-16 px-2 pb-10 py-16">
+          <div class="grid md:grid-cols-[1fr_1.25fr] grid-cols-1 gap-5">
+            <!--grid-cols-[1fr_2fr]-->
+
+            <div class="flex flex-col gap-4 justify-center">
+              <h2 class="text-5xl font-bold text-white">
+                <span class="text-[#d4fa00]">Transform</span> Your Body <br />
+                Elevate Your Life
+              </h2>
+              <p class="text-white mt-4">
+                Join our community and start your journey to a healthier,
+                stronger you. Expert coaches, top-tier equipment, and
+                personalized plans designed to help you reach your goals faster.
+              </p>
+              <div class="py-2.5 flex gap-5">
+                <a
+                  href="login.html"
+                  class="flex items-center justify-center w-32 bg-[#d4fa00] border-2 border-[#d4fa00] text-black h-10 rounded-[10px] hover:bg-[#ffffff0a] hover:border-[#ffffff1b] hover:text-white transition-[100ms] ease-in"
+                  >Join Now -></a
+                >
+                <a
+                  href="comida.html"
+                  class="flex items-center justify-center border-2 border-[#c1c1c1] text-white h-10 w-32 rounded-[10px] hover:bg-[#ffffff0a] hover:border-[#ffffff1b] transition-[100ms] ease-in"
+                  >Food Page -></a
+                >
+              </div>
+              <!-- TARJETA DE MEDIA DE CLASIFICACION -->
+              <div class="flex items-center gap-4 mt-2">
+                <!-- Avatares apilados -->
+                <div class="flex items-center">
+                  <div
+                    class="w-9 h-9 flex items-center justify-center rounded-full bg-white border-2 border-[#9c9c9c] z-40"
+                  >
+                    <img class="w-7" src="img/user-ico.svg" alt="" />
+                  </div>
+                  <div
+                    class="w-9 h-9 flex items-center justify-center rounded-full bg-white border-2 border-[#9c9c9c] -ml-3 z-30"
+                  >
+                    <img class="w-7" src="img/user-ico.svg" alt="" />
+                  </div>
+                  <div
+                    class="w-9 h-9 flex items-center justify-center rounded-full bg-white border-2 border-[#9c9c9c] -ml-3 z-20"
+                  >
+                    <img class="w-7" src="img/user-ico.svg" alt="" />
+                  </div>
+                  <div
+                    class="w-9 h-9 flex items-center justify-center rounded-full bg-white border-2 border-[#9c9c9c] -ml-3 z-10"
+                  >
+                    <img class="w-7" src="img/user-ico.svg" alt="" />
+                  </div>
+                </div>
+
+                <!-- Estrellas y texto -->
+                <div class="flex flex-col gap-1">
+                  <div class="flex items-center gap-1">
+                    <img class="w-3" src="img/star-ico.svg" alt="" />
+                    <img class="w-3" src="img/star-ico.svg" alt="" />
+                    <img class="w-3" src="img/star-ico.svg" alt="" />
+                    <img class="w-3" src="img/star-ico.svg" alt="" />
+                    <img class="w-3" src="img/star-half-ico.svg" alt="" />
+                    <small class="text-white ml-1">4.5</small>
+                  </div>
+                  <p class="text-white text-sm">Trusted by 15+ members</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-center items-center md:visible invisible w-0 h-0 md:w-auto md:h-auto"
+            >
+              <img
+                class="w-[700px] [mask-image:linear-gradient(to_bottom,black_55%,transparent_95%)] [-webkit-mask-image:linear-gradient(to_bottom,black_55%,transparent_95%)] drop-shadow-[0_0_7px_rgba(212,250,0,0.5)]"
+                src="img/GymFondoCalidad.png"
+                alt="PortadaVcFitness"
+              />
+            </div>
+          </div>
+        </section>
+
+        <!-- TRAINING PROGRAMS -->
+        <section
+          id="programs"
+          class="mt-32 text-white sm:px-16 px-2 py-16 bg-[#1e2535] rounded-3xl"
+        >
+          <!-- Fila superior: título izquierda, descripción derecha -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 sm:px-0 px-4 gap-10 mb-16"
+          >
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-3">Programs</p>
+              <h2 class="text-5xl font-extrabold text-white leading-tight">
+                Train <span class="text-[#d4fa00]">Smarter</span> Every Day
+              </h2>
+            </div>
+            <div class="flex items-center">
+              <p class="text-gray-300">
+                Choose the program that fits your goal. Each plan is designed by
+                experts to help you get real results, whether you want to lose
+                fat, gain muscle, or just feel better.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fila 1: 4 columnas -->
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-14"
+          >
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/fire-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Fat Loss (Caloric Deficit)
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A structured program focused on reducing body fat through a
+                controlled caloric deficit while preserving muscle mass.
+                Includes efficient training sessions and a satiating,
+                sustainable nutrition plan.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/dumbbell-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">Muscle Gain (Bulking)</h3>
+              <p class="text-gray-300 text-sm">
+                A hypertrophy‑oriented program designed to increase muscle mass
+                through progressive overload and a moderate caloric surplus.
+                Ideal for users aiming to grow in size and strength.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/bolt-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Body Recomposition (Controlled Surplus)
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A structured program focused on reducing body fat through a
+                controlled caloric deficit while preserving muscle mass.
+                Includes efficient training sessions and a satiating,
+                sustainable nutrition plan.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/scale-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">Active Maintenance</h3>
+              <p class="text-gray-300 text-sm">
+                A lifestyle‑focused program for maintaining current weight while
+                improving energy, performance, and overall well‑being. Features
+                moderate training and a balanced nutrition approach.
+              </p>
+            </div>
+          </div>
+
+          <!-- Fila 2: 3 columnas centradas -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-16 lg:px-32">
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/heart-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Healthy Living Plan (Wellness)
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A health‑oriented program aimed at improving daily habits,
+                metabolic health, and overall vitality. Includes light to
+                moderate workouts and an anti‑inflammatory, easy‑to‑follow
+                nutrition plan.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/flag-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Beginner Program (Foundations)
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A beginner‑friendly plan designed for people starting from zero.
+                Simple, progressive, and safe workouts paired with basic
+                nutrition guidance to build strong long‑term habits.
+              </p>
+            </div>
+
+            <div class="px-8">
+              <img class="w-12 mb-5" src="img/strength-ico.svg" alt="" />
+              <h3 class="text-xl font-extrabold mb-3">
+                Strength / Powerlifting
+              </h3>
+              <p class="text-gray-300 text-sm">
+                A performance‑driven program focused on increasing maximal
+                strength in the squat, bench press, and deadlift. Features
+                structured progression and nutrition optimized for training
+                output.
+              </p>
+            </div>
+          </div>
+
+          <!-- Botones centrados -->
+          <div class="flex justify-center gap-5">
+            <a
+              href=""
+              class="px-8 py-2.5 border-2 border-white text-white rounded-[10px] hover:bg-[#ffffff1a] transition-[100ms] ease-in"
+            >
+              Contact Us
+            </a>
+            <a
+              href="Register.html"
+              class="px-8 py-2.5 border-2 border-white text-white rounded-[10px] hover:bg-[#ffffff1a] transition-[100ms] ease-in"
+            >
+              Join Us
+            </a>
+          </div>
+        </section>
+
+        <!-- PRICING SECTION -->
+        <section id="prices" class="mt-32 text-white sm:px-16 px-0 py-16">
+          <!-- Encabezado centrado -->
+          <div class="text-center mb-12">
+            <p class="text-[#d4fa00] font-semibold mb-3">Pricing</p>
+            <h2 class="text-5xl font-extrabold text-white">
+              Choose Your <span class="text-[#d4fa00]">Plan</span>
+            </h2>
+          </div>
+
+          <!-- Toggle Monthly / Yearly -->
+          <div class="flex justify-center mb-14">
+            <div class="flex bg-[#1e2535] rounded-full p-1 gap-1">
+              <button
+                id="btn-monthly"
+                onclick="togglePricing('monthly')"
+                class="px-6 py-2 rounded-full font-semibold text-black bg-[#d4fa00] transition-all duration-300"
+              >
+                Monthly
+              </button>
+              <button
+                id="btn-yearly"
+                onclick="togglePricing('yearly')"
+                class="px-6 py-2 rounded-full font-semibold text-white transition-all duration-300"
+              >
+                Yearly
+              </button>
+            </div>
+          </div>
+
+          <!-- Cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- BASIC -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <div>
+                <h3 class="text-2xl font-extrabold mb-1">BASIC</h3>
+                <div class="flex items-end gap-2">
+                  <span
+                    class="text-[#d4fa00] text-4xl font-extrabold"
+                    id="price-basic"
+                    >$39</span
+                  >
+                  <span class="text-[#d4fa00] text-sm mb-1">/per month</span>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm border-b border-[#ffffff1a] pb-5">
+                A foundational membership that gives you full access to the gym
+                facilities and entry to the in‑house restaurant. Ideal for
+                beginners or anyone who wants a simple, effective start.
+              </p>
+              <ul class="flex flex-col gap-3 flex-1">
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Full access to gym equipment</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Access to gym restaurant</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Group classes access</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Locker room and showers</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li class="flex justify-between items-center text-sm">
+                  <span>Basic progress tracking</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+              </ul>
+              <a
+                href="Register.html"
+                class="mt-4 bg-[#d4fa00] text-black font-bold text-center py-3 rounded-[10px] hover:bg-[#ffffff1a] hover:text-white border-2 border-[#d4fa00] hover:border-[#ffffff1b] transition-[100ms] ease-in"
+              >
+                Get Started
+              </a>
+            </div>
+
+            <!-- MEDIUM -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <div>
+                <h3 class="text-2xl font-extrabold mb-1">MEDIUM</h3>
+                <div class="flex items-end gap-2">
+                  <span
+                    class="text-[#d4fa00] text-4xl font-extrabold"
+                    id="price-medium"
+                    >$79</span
+                  >
+                  <span class="text-[#d4fa00] text-sm mb-1">/per month</span>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm border-b border-[#ffffff1a] pb-5">
+                A balanced plan combining gym access with a structured meal plan
+                and a 10% discount at the gym restaurant. Includes pre‑designed
+                programs based on your goals.
+              </p>
+              <ul class="flex flex-col gap-3 flex-1">
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Everything in Basic Plan</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>10% discount at gym restaurant</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Pre‑designed workout programs</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Monthly check‑ins with a coach</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li class="flex justify-between items-center text-sm">
+                  <span>Priority booking for classes</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+              </ul>
+              <a
+                href="Register.html"
+                class="mt-4 bg-[#d4fa00] text-black font-bold text-center py-3 rounded-[10px] hover:bg-[#ffffff1a] hover:text-white border-2 border-[#d4fa00] hover:border-[#ffffff1b] transition-[100ms] ease-in"
+              >
+                Get Started
+              </a>
+            </div>
+
+            <!-- ADVANCED -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <div>
+                <h3 class="text-2xl font-extrabold mb-1">ADVANCED</h3>
+                <div class="flex items-end gap-2">
+                  <span
+                    class="text-[#d4fa00] text-4xl font-extrabold"
+                    id="price-advanced"
+                    >$129</span
+                  >
+                  <span class="text-[#d4fa00] text-sm mb-1">/per month</span>
+                </div>
+              </div>
+              <p class="text-gray-300 text-sm border-b border-[#ffffff1a] pb-5">
+                A premium membership for serious trainees. Includes a
+                personalized meal plan, 15% restaurant discount, and one free
+                weekly snack. Fully tailored to your goals.
+              </p>
+              <ul class="flex flex-col gap-3 flex-1">
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Everything in Medium Plan</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>15% discount at gym restaurant</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>One free healthy snack/week</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li
+                  class="flex justify-between items-center text-sm border-b border-[#ffffff1a] pb-3"
+                >
+                  <span>Custom training program monthly</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+                <li class="flex justify-between items-center text-sm">
+                  <span>Body composition analysis</span>
+                  <svg
+                    class="w-5 h-5 text-[#d4fa00] shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    viewBox="0 0 24 24"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </li>
+              </ul>
+              <a
+                href="Register.html"
+                class="mt-4 bg-[#d4fa00] text-black font-bold text-center py-3 rounded-[10px] hover:bg-[#ffffff1a] hover:text-white border-2 border-[#d4fa00] hover:border-[#ffffff1b] transition-[100ms] ease-in"
+              >
+                Get Started
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- REVIEWS SECTION -->
+        <section id="reviews" class="mt-32 text-white sm:px-16 px-0 py-16">
+          <!-- Encabezado -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 px-2 gap-10 mb-16">
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-3">Reviews</p>
+              <h2 class="text-5xl font-extrabold text-white">
+                What Our <span class="text-[#d4fa00]">Members</span> Say
+              </h2>
+            </div>
+            <div class="flex items-center">
+              <p class="text-gray-300">
+                Real results, real people. See what our community has to say
+                about their experience training with us.
+              </p>
+            </div>
+          </div>
+
+          <!-- Cards de reviews -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <!-- Review 1 -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <!-- Estrellas -->
+              <div class="flex gap-1">
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <!-- Texto -->
+              <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                "Llevaba años intentando perder peso sin éxito. Desde que me uní
+                a BR-Fitness con el plan Medium, todo cambió. Los programas
+                están muy bien estructurados y la comida del restaurante es una
+                pasada. En 3 meses bajé 8kg."
+              </p>
+              <!-- Usuario -->
+              <div
+                class="flex items-center gap-4 pt-4 border-t border-[#ffffff1a]"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-[#d4fa00] flex items-center justify-center text-black font-extrabold text-sm shrink-0"
+                >
+                  AM
+                </div>
+                <div>
+                  <p class="font-bold text-sm">Adrián Morales</p>
+                  <p class="text-gray-400 text-xs">Basic Plan · Horta</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <!-- Estrellas -->
+              <div class="flex gap-1">
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <!-- Estrella vacía -->
+                <svg
+                  class="w-4 h-4 text-[#ffffff30]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <!-- Texto -->
+              <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                "El plan Advanced es lo mejor que he hecho por mi salud. El
+                análisis de composición corporal me abrió los ojos y el plan de
+                nutrición personalizado es brutal. Los coaches son muy
+                profesionales y siempre están disponibles."
+              </p>
+              <!-- Usuario -->
+              <div
+                class="flex items-center gap-4 pt-4 border-t border-[#ffffff1a]"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-[#d4fa00] flex items-center justify-center text-black font-extrabold text-sm shrink-0"
+                >
+                  LF
+                </div>
+                <div>
+                  <p class="font-bold text-sm">Laura Fernández</p>
+                  <p class="text-gray-400 text-xs">
+                    Advanced Plan · Passeig de Gràcia
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-[#1e2535] rounded-2xl p-8 flex flex-col gap-5">
+              <!-- Estrellas -->
+              <div class="flex gap-1">
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+                <svg
+                  class="w-4 h-4 text-[#d4fa00]"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                  />
+                </svg>
+              </div>
+              <!-- Texto -->
+              <p class="text-gray-300 text-sm leading-relaxed flex-1">
+                "Empecé de cero con el plan Beginner y ahora llevo 6 meses con
+                el Medium. La progresión es muy natural, nunca me sentí perdido.
+                El gimnasio tiene un ambiente increíble y la comunidad te
+                engancha desde el primer día."
+              </p>
+              <!-- Usuario -->
+              <div
+                class="flex items-center gap-4 pt-4 border-t border-[#ffffff1a]"
+              >
+                <div
+                  class="w-10 h-10 rounded-full bg-[#d4fa00] flex items-center justify-center text-black font-extrabold text-sm shrink-0"
+                >
+                  JR
+                </div>
+                <div>
+                  <p class="font-bold text-sm">Jorge Ruiz</p>
+                  <p class="text-gray-400 text-xs">
+                    Medium Plan · Sant Gervasi
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botón Ver más -->
+          <div class="flex justify-center">
+            <button
+              disabled
+              class="px-10 py-3 border-2 border-[#ffffff30] text-[#ffffff40] rounded-[10px] cursor-not-allowed text-sm font-semibold"
+            >
+              Ver más reviews
+            </button>
+          </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section
+          id="contact"
+          class="mt-32 text-white sm:px-16 px-0 py-16 bg-[#1e2535] rounded-3xl"
+        >
+          <!-- Fila superior -->
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-16 sm:text-start text-center"
+          >
+            <div>
+              <p class="text-[#d4fa00] font-semibold mb-3">Contact Us</p>
+              <h2 class="text-5xl font-extrabold text-white">
+                Our <span class="text-[#d4fa00]">Locations</span>
+              </h2>
+            </div>
+            <!-- Redes sociales -->
+            <div class="flex items-center sm:justify-end justify-center gap-6">
+              <!-- Instagram -->
+              <a
+                href=""
+                class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in"
+              >
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <!-- WhatsApp -->
+              <a
+                href=""
+                class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in"
+              >
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                  />
+                </svg>
+              </a>
+              <!-- Twitter / X -->
+              <a
+                href=""
+                class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in"
+              >
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.213 5.567 5.951-5.567zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+              <!-- TikTok -->
+              <a
+                href=""
+                class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in"
+              >
+                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.16 8.16 0 004.77 1.52V6.82a4.85 4.85 0 01-1-.13z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contenido: lista izquierda + mapa derecha -->
+          <div class="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-10">
+            <!-- Lista de ubicaciones -->
+            <div class="flex flex-col gap-0">
+              <div
+                id="loc-horta"
+                onclick="showMap('horta')"
+                class="location-item border-l-4 border-[#d4fa00] pl-5 py-6 cursor-pointer border-b border-[#ffffff1a] hover:bg-[#ffffff05] transition-[100ms] ease-in"
+              >
+                <h3 class="text-2xl font-extrabold mb-1">HORTA</h3>
+                <p class="text-gray-300 mb-3">
+                  Carrer de Campoamor, 18, Barcelona
+                </p>
+                <span class="text-[#d4fa00] text-xs font-bold tracking-widest"
+                  >VIEW MAP</span
+                >
+              </div>
+
+              <div
+                id="loc-santgervasi"
+                onclick="showMap('santgervasi')"
+                class="location-item border-l-4 border-transparent pl-5 py-6 cursor-pointer border-b border-[#ffffff1a] hover:bg-[#ffffff05] transition-[100ms] ease-in"
+              >
+                <h3 class="text-2xl font-extrabold mb-1">SANT GERVASI</h3>
+                <p class="text-gray-300 mb-3">
+                  Carrer de Santaló, 52, Barcelona
+                </p>
+                <span class="text-[#d4fa00] text-xs font-bold tracking-widest"
+                  >VIEW MAP</span
+                >
+              </div>
+
+              <div
+                id="loc-passeig"
+                onclick="showMap('passeig')"
+                class="location-item border-l-4 border-transparent pl-5 py-6 cursor-pointer hover:bg-[#ffffff05] transition-[100ms] ease-in"
+              >
+                <h3 class="text-2xl font-extrabold mb-1">PASSEIG DE GRÀCIA</h3>
+                <p class="text-gray-300 mb-3">
+                  Passeig de Gràcia, 43, Barcelona
+                </p>
+                <span class="text-[#d4fa00] text-xs font-bold tracking-widest"
+                  >VIEW MAP</span
+                >
+              </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="rounded-2xl overflow-hidden h-[420px]">
+              <iframe
+                id="map-frame"
+                src="https://maps.google.com/maps?q=Carrer+de+Campoamor+18+Barcelona&output=embed"
+                width="100%"
+                height="100%"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="mt-32 text-white px-16 py-16 border-t border-[#ffffff1a]">
+        <!-- Contenido principal -->
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-16 mb-16"
+        >
+          <!-- Logo y descripción -->
+          <div class="flex flex-col gap-6">
+            <h2 class="font-bold text-2xl">
+              <span class="text-[#d4fa00]">BR</span>-Fitness
+            </h2>
+            <p class="text-gray-400 text-sm leading-relaxed">
+              Our gym is built on the belief that fitness is more than just
+              working out — it's a lifestyle. With certified trainers, modern
+              equipment, and a motivating community, we help you push beyond
+              your limits. From fat loss to powerlifting, every program is
+              designed to deliver real results.
+            </p>
+          </div>
+
+          <!-- Company -->
+          <div class="flex flex-col gap-5">
+            <h3 class="text-[#d4fa00] font-bold text-lg">Company</h3>
+            <nav class="flex flex-col gap-3">
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Home</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >About Us</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Programs</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Pricing</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Contact</a
+              >
+            </nav>
+          </div>
+
+          <!-- Support -->
+          <div class="flex flex-col gap-5">
+            <h3 class="text-[#d4fa00] font-bold text-lg">Support</h3>
+            <nav class="flex flex-col gap-3">
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >FAQs</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Membership Plans</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Terms & Conditions</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Privacy Policy</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Cookies Policy</a
+              >
+            </nav>
+          </div>
+
+          <!-- FAQs -->
+          <div class="flex flex-col gap-5">
+            <h3 class="text-[#d4fa00] font-bold text-lg">FAQs</h3>
+            <nav class="flex flex-col gap-3">
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >How do I sign up?</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Can I switch plans?</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Are group classes available?</a
+              >
+              <a
+                class="text-gray-300 hover:text-[#d4fa00] transition-[100ms] ease-in text-sm cursor-default"
+                >Is the restaurant for members only?</a
+              >
+            </nav>
+          </div>
+        </div>
+
+        <!-- Barra inferior -->
+        <div
+          class="border-t border-[#ffffff1a] pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
+        >
+          <!-- Legal -->
+          <div class="flex gap-8">
+            <a
+              class="text-gray-400 text-sm hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"
+              >Cookies policy</a
+            >
+            <a
+              class="text-gray-400 text-sm hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"
+              >Legal terms</a
+            >
+            <a
+              class="text-gray-400 text-sm hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"
+              >Privacy policy</a
+            >
+          </div>
+
+          <!-- Copyright -->
+          <p class="text-gray-500 text-xs">
+            © 2025 BR-Fitness. All rights reserved.
+          </p>
+
+          <!-- Redes sociales -->
+          <div class="flex gap-5">
+            <a
+              class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+            <a
+              class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.737-8.835L1.254 2.25H8.08l4.213 5.567 5.951-5.567zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+            <a
+              class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                />
+              </svg>
+            </a>
+            <a
+              class="text-white hover:text-[#d4fa00] transition-[100ms] ease-in cursor-default"
+            >
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path
+                  d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.75a8.16 8.16 0 004.77 1.52V6.82a4.85 4.85 0 01-1-.13z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>
