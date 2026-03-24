@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VR Fitness</title>
+  <title>BR Fitness</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+  <script src="./js/main.js" defer> </script>
   <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { bebas: ['"Bebas Neue"', 'cursive'] },
-          colors:     { neon: '#d4fa00' },
-        },
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { bebas: ['"Bebas Neue"', 'cursive'] },
+        colors:     { neon: '#d4fa00' },
       },
-    }
-  </script>
+    },
+  }
+</script>
 </head>
 <body class="bg-[#0a0f1a] overflow-hidden">
 
@@ -133,31 +134,6 @@
         </h1>
       </div>
     </div>
-
-    <!-- ══════════════════════════════════════════
-         HOVER JS
-         FIX: group-hover no funciona cuando el
-         padre tiene clip-path. Se usa mouseenter /
-         mouseleave directamente sobre cada panel.
-    ═══════════════════════════════════════════ -->
-    <script>
-      const panels = {
-        comida: { el: document.getElementById('comida'), brightIn: 'brightness(1)',   brightOut: 'brightness(0.82)' },
-        gym:    { el: document.getElementById('gym'),    brightIn: 'brightness(0.9)', brightOut: 'brightness(0.72)' },
-      };
-
-      Object.values(panels).forEach(({ el, brightIn, brightOut }) => {
-        const img = el.querySelector('img');
-        el.addEventListener('mouseenter', () => {
-          img.style.filter    = brightIn;
-          img.style.transform = 'scale(1.05)';
-        });
-        el.addEventListener('mouseleave', () => {
-          img.style.filter    = brightOut;
-          img.style.transform = 'scale(1)';
-        });
-      });
-    </script>
 
   </div>
 
